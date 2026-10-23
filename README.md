@@ -1,25 +1,120 @@
-Fix the README.md presentation in my existing repository: https://github.com/saqibishaque/codenova-notes-app
+# CodeNova Notes App
 
-The current GitHub README renders as a dense wall of text instead of clean, formatted Markdown.
+A full-stack notes application built with **React, Node.js, Express, and SQLite** as part of the CodeNova Full Stack Development Internship.
 
-Requirements:
-1. Inspect the actual README.md file and identify why headings, lists, tables, code blocks, and separators are not rendering correctly.
-2. Rewrite README.md using valid GitHub Flavored Markdown. Ensure every code fence is correctly opened and closed, headings use proper Markdown syntax, lists are spaced correctly, and tables render properly.
-3. Keep the README concise, professional, and easy to scan. Use this structure:
-   - Project title and short description
-   - Technology badges
-   - Overview
-   - Key features
-   - Technology stack
-   - Actual project folder structure
-   - Installation and setup
-   - Running the application
-   - API endpoints
-4. Remove excessive promotional wording, repetitive content, unnecessary submission checklists, and oversized sections.
-5. Preserve only features and commands verified from the actual source code and package.json files. Do not invent screenshots, demo links, test results, or capabilities.
-6. Verify all relative links and ensure the README renders correctly on GitHub.
-7. Check the actual repository for .env files, credentials, and generated SQLite databases. Never expose secrets. Update documentation and .gitignore appropriately without deleting important user data.
-8. Modify README.md and, only if necessary, .gitignore. Do not change application source code, redesign the app, deploy it, or push changes to GitHub.
-9. Show me the final changes and the exact Git commands to commit and push the README update.
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![Node.js](https://img.shields.io/badge/Node.js-Backend-339933?logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express.js-API-000000?logo=express)](https://expressjs.com/)
+[![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?logo=sqlite&logoColor=white)](https://www.sqlite.org/)
 
-The goal is a clean, polished GitHub repository page, not a lengthy technical report.
+## Overview
+
+CodeNova Notes App provides a simple way to create, organize, search, edit, and delete notes. It uses a React frontend, an Express REST API, and SQLite for persistent data storage.
+
+## Features
+
+- **Create, Read, Update & Delete** — manage notes with full CRUD functionality.
+- **Instant Search** — find notes by title, content, or category.
+- **Grid & List Views** — switch between different layouts.
+- **Pin Notes** — keep important notes easily accessible.
+- **Categories** — organize notes by topic.
+- **Custom Colors** — visually distinguish notes.
+- **Toast Notifications** — receive feedback on actions and errors.
+- **Delete Confirmation** — reduce accidental deletions.
+- **Responsive Interface** — use the application across different screen sizes.
+
+## Tech Stack
+
+| Layer | Technologies |
+|---|---|
+| Frontend | React 19, Vite, Tailwind CSS v4 |
+| Backend | Node.js, Express.js |
+| Database | SQLite 3 |
+| Utilities | Lucide React, Morgan, CORS, dotenv |
+
+## Project Structure
+
+```text
+codenova-notes-app/
+├── client/
+│   ├── src/
+│   │   ├── api/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── App.jsx
+│   │   └── index.css
+│   ├── index.html
+│   └── package.json
+├── server/
+│   ├── src/
+│   │   ├── routes/
+│   │   ├── scripts/
+│   │   ├── database.js
+│   │   ├── index.js
+│   │   └── schema.sql
+│   └── package.json
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18 or later)
+- npm
+
+### Installation
+
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/saqibishaque/codenova-notes-app.git
+cd codenova-notes-app
+```
+
+**2. Install dependencies**
+
+```bash
+npm run install:all
+```
+
+**3. Start the application**
+
+```bash
+npm run dev
+```
+
+Open the frontend at `http://localhost:5173`.
+
+The backend API runs at `http://localhost:5000`.
+
+### Optional: Add sample data
+
+To seed the database with sample notes, run:
+
+```bash
+npm run seed
+```
+
+Run this command from the project root.
+
+## API Endpoints
+
+| Method | Endpoint | Purpose |
+|---|---|---|
+| GET | `/api/health` | Check server health |
+| GET | `/api/notes` | Retrieve and search notes |
+| GET | `/api/notes/categories/list` | Retrieve categories |
+| GET | `/api/notes/:id` | Retrieve one note |
+| POST | `/api/notes` | Create a note |
+| PUT | `/api/notes/:id` | Update a note |
+| PATCH | `/api/notes/:id/pin` | Toggle note pin |
+| DELETE | `/api/notes/:id` | Delete a note |
+
+## What I Learned
+
+- Building a full-stack application with React and Express.
+- Designing RESTful API endpoints.
+- Integrating SQLite for persistent storage.
