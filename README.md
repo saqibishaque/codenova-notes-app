@@ -220,3 +220,5 @@ npm run dev
 - [ ] Push codebase to a public GitHub repository named `codenova-notes-app`.
 - [ ] Record a brief walkthrough demo or capture screenshots for the submission form.
 - [ ] Complete at least 1 additional task (e.g., Task 2 Expense Tracker) to satisfy the **2-task minimum** requirement.
+#   c o d e n o v a - n o t e s - a p p  
+ 
